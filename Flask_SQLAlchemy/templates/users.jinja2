@@ -1,0 +1,27 @@
+{% extends "layout.jinja2" %}
+
+{% block content %}
+  <div class="container">
+    <h1>Flask-SQLAlchemy Tutorial</h1>
+    {% for bookmark in bookmarksList %}
+      <ul id="bookmark.title">
+        <li>
+          <span class="field-name">Title:</span>
+          <span class="field-value">{{ bookmark.title }}</span>
+        </li>
+        <li>
+          <span class="field-name">Email:</span>
+          <span class="field-value">{{ bookmark.url }}</span>
+        </li>
+        <li>
+          <span class="field-name">Created:</span>
+          <span class="field-value">{{ bookmark.createdDate }}</span>
+        </li>
+        <li>
+          <span class="field-name">Notes:</span>
+          <span class="field-value">{{ bookmark.notes }}</span>
+        </li>
+      </ul>
+    {% endfor %}
+  </div>
+{% endblock %}
